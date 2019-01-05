@@ -1,0 +1,35 @@
+.content {
+  background-color: #edf2f7;
+  padding: 2rem 0;
+  &-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &-item {
+      position: relative;
+      width: 33%;
+      margin-bottom: 1rem;
+      padding: 1.6rem;
+      border: 2px solid #d7dfea;
+      border-radius: 10px;
+      background-color: #fff;
+      h3 {
+        color: #0066dc;
+      }
+      h5 {
+        position: absolute;
+        bottom: 0.5rem;
+        color: #a3a9ae;
+      }
+      @media (max-width: 768px) {
+        width: 48%;
+      }
+      @media (max-width: 576px) {
+        width: 90%;
+      }
+    }
+  }
+  input {
+    width: 100%;
+  }
+}

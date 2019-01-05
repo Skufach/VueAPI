@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vue API Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/1normalize.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+<div id="app" class="content">
+    <div class="container">
+
+        <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+            <p><input type="text" v-model="searchString" placeholder="Enter author..."/></p>
+        </div>
+
+        <div class="content-block">
+
+            <div class="content-block-item" v-for="post in filteredPosts">
+                <h3>{{post.title}}</h3>
+                <p>{{post.body}}</p>
+                <h5>{{users[post.userId-1].name}}</h5>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
